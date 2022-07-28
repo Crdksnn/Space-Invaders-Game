@@ -28,9 +28,12 @@ public class EnemyBullet : MonoBehaviour
     private bool LineInterSection(Vector2 pos,Vector2 movement)
     {
 
-        if (Math2d.LineSegmentsIntersection(pos, movement, _playerBoundries[0], _playerBoundries[1]))
+        for (int i = 0; i < _playerBoundries.Count; i+=2)
         {
-            return true;
+            if (Math2d.LineSegmentsIntersection(pos, movement, _playerBoundries[i], _playerBoundries[i + 1]))
+            {
+                return true;
+            }
         }
             
         
@@ -51,6 +54,12 @@ public class EnemyBullet : MonoBehaviour
         
         _playerBoundries.Add(leftUpPoint);
         _playerBoundries.Add(rightUpPoint);
+        
+        _playerBoundries.Add(leftUpPoint);
+        _playerBoundries.Add(leftDownPoint);
+        
+        _playerBoundries.Add(rightUpPoint);
+        _playerBoundries.Add(rightDownPoint);
         
     }
 
