@@ -4,13 +4,9 @@ using UnityEngine;
 
 public static class Math2d
 {
-    
-    
-    //out Vector2 intersection
+
     public static bool LineSegmentsIntersection(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4)
     {
-        
-        //intersection = Vector2.zero;
 
         var d = (p2.x - p1.x) * (p4.y - p3.y) - (p2.y - p1.y) * (p4.x - p3.x);
 
@@ -26,10 +22,7 @@ public static class Math2d
         {
             return false;
         }
-
-        //intersection.x = p1.x + u * (p2.x - p1.x);
-        //intersection.y = p1.y + u * (p2.y - p1.y);
-
+        
         return true;
     }
 }

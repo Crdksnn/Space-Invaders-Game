@@ -10,8 +10,8 @@ public class PlayerSettings : MonoBehaviour
     private float _fireWaitTime;
     private Vector2 bulletInstantiatePos;
     //Boundries
-    private Vector2 leftBoundry = new Vector2(-2.5f, 0);
-    private Vector2 rightBoundry = new Vector2(2.5f, 0);
+    private Vector2 leftMapBoundry = new Vector2(-2.5f, 0);
+    private Vector2 rightMapBoundry = new Vector2(2.5f, 0);
     void Start()
     {
         _fireWaitTime = 0;
@@ -53,7 +53,7 @@ public class PlayerSettings : MonoBehaviour
         
         var newPos = pos + movement;
 
-        if (leftBoundry.x <= newPos.x && newPos.x <= rightBoundry.x)
+        if (leftMapBoundry.x <= newPos.x && newPos.x <= rightMapBoundry.x)
             transform.position = newPos;
     }
 }
