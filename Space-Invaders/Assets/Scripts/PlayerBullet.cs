@@ -57,7 +57,8 @@ public class PlayerBullet : MonoBehaviour
         {
             for (int j = 0; j < allEnemies[i].Count; j++)
             {
-
+                
+                List<Vector2> currentEnemyBoundry = new List<Vector2>();
                 Transform currentEnemy = allEnemies[i][j];
                 float localScale = currentEnemy.transform.localScale.x;
 
@@ -66,8 +67,6 @@ public class PlayerBullet : MonoBehaviour
                 _rightUpPoint = new Vector2(currentEnemy.position.x + localScale / 2, currentEnemy.position.y + localScale / 2);
                 _rightDownPoint = new Vector2(currentEnemy.position.x + localScale / 2, currentEnemy.position.y - localScale / 2);
 
-                List<Vector2> currentEnemyBoundry = new List<Vector2>();
-                
                 //Down boundry
                 currentEnemyBoundry.Add(_leftDownPoint);
                 currentEnemyBoundry.Add(_rightDownPoint);

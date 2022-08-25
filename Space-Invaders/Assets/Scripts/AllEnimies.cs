@@ -19,7 +19,7 @@ public class AllEnimies : MonoBehaviour
         _allEnemiesList.Remove(enemiesArray);
     }
 
-    public List<List<Transform>> GetEnemiesList()
+    public List< List<Transform> > GetEnemiesList()
     {
         return _allEnemiesList;
     }

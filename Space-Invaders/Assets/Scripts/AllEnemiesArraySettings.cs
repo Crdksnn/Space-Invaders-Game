@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyArraySettings : MonoBehaviour
+public class AllEnemiesArraySettings : MonoBehaviour
 {
     [SerializeField] private float _arraySpeed;
     private Vector2 target = new Vector2(-.5f,0);
